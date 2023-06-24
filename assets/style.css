@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 80%;
+    justify-content: center;
+    margin: 20px auto;
+    transition: 0.5s;
+
+
+}
+
+.menu figure {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+.menu img {
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
+    position: relative;
+}
+
+.menu img:hover {
+    scale: 1.2;
+    width: 100%;
+}
+.menu img::after{
+    content: '';
+    background-color: #ffffff00;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.menu img:hover::after{
+    background-color: #ffffffb0;
+}
+
+.menu figure::after {
+    color: white;
+    font-size: 30px;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    rotate: 270deg;
+    transition: 0.5s;
+}
+
+.menu figure:nth-child(1)::after {
+    content: 'home';
+
+}
+
+.menu figure:nth-child(2)::after {
+    content: 'about';
+
+}
+
+.menu figure:nth-child(3)::after {
+    content: 'gallery';
+
+}
+
+.menu figure:nth-child(4)::after {
+    content: 'contact';
+
+}
+
+.menu figure:hover::after {
+    left: 40px;
+    align-items: center;
+    rotate: 360deg;
+    font-size: 40px;
+
+}
+.menu figcaption{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 100px;
+    left: -350px;
+    transition: 0.5s;
+    border: 1px solid white;
+    border-radius: 30px;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    
+}
+.menu figure:hover figcaption{
+    display: block;
+    left: 0;
+    height: 40px;
+    
+}
